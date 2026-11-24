@@ -1,3 +1,9 @@
+use practiceDB
+go
+
+select * from sys.tables order by create_date desc
+
+--RAW DATASETr
 select *
 from credit_card_transactions;
 
@@ -6,6 +12,9 @@ select exp_type from credit_card_transactions group by exp_type;
 select distinct card_type from credit_card_transactions;
 
 select min(transaction_date), max(transaction_date) from credit_card_transactions;
+
+ALTER TABLE credit_card_transactions
+ALTER COLUMN amount FLOAT;
 
 --Q1: write a query to print top 5 cities with highest spends and their percentage contribution of total credit card spends 
 
